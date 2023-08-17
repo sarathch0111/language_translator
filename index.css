@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10px;
+    min-height: 100vh;
+    background: #5372f0;
+}
+
+.container {
+    width: 690px;
+    background: #fff;
+    border-radius: 7px;
+    padding: 30px;
+}
+
+.wrapper {
+    border-radius: 5px;
+    border: 1px solid #bbb;
+}
+
+.wrapper .text-input {
+    display: flex;
+    border-bottom: 1px solid #bbb;
+}
+
+.text-input .to-text {
+    border-radius: 0px;
+    border-left: 1px solid #bbb;
+}
+
+.text-input textarea {
+    height: 250px;
+    width: 100%;
+    border: none;
+    outline: none;
+    resize: none;
+    font-size: none;
+    border-radius: 5px;
+    background: none;
+    font-size: 18px;
+    padding: 10px 15px;
+}
+
+.text-input textarea::placeholder {
+    color: #b7b6b6;
+}
+
+.controls,
+li,
+.icons,
+.icons i {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.controls {
+    list-style: none;
+    padding: 12px 15px;
+}
+
+.controls .icons {
+    width: 38%;
+}
+
+.controls .row.from .icons {
+    padding-right: 15px;
+    border-right: 1px solid #bbb;
+}
+
+.controls .row.to .icons {
+    padding-left: 15px;
+    border-left: 1px solid #bbb;
+}
+
+.controls .icons i {
+    width: 50px;
+    color: #9f9f9f;
+    font-size: 14px;
+    cursor: pointer;
+    justify-content: center;
+}
+
+.controls .row select {
+    border: none;
+    outline: none;
+    font-size: 18px;
+    background: none;
+}
+
+.text-input textarea::-webkit-scrollbar {
+    width: 4px;
+}
+
+.controls .row select::-webkit-scrollbar {
+    width: 8px;
+}
+
+.text-input textarea::-webkit-scrollbar-track,
+.controls .row select::-webkit-scrollbar-track {
+    background: #fff;
+}
+
+.text-input textarea::-webkit-scrollbar-thumb {
+    background: #ddd;
+    border-radius: 8px;
+}
+
+.controls .row select::-webkit-scrollbar-thumb {
+    background: #999;
+    border-radius: 8px;
+    border-right: 2px solid #ffffff;
+}
+
+.controls .exchange {
+    color: #9f9f9f;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.container button {
+    width: 100%;
+    padding: 14px;
+    margin-top: 20px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: #fff;
+    font-size: 17px;
+    border-radius: 5px;
+    background: #5372f0;
+}
+
+@media (max-width:660px) {
+
+    .container {
+        padding: 20px;
+    }
+
+    .wrapper .text-input {
+        flex-direction: column;
+    }
+
+    .text-input .to-text {
+        border: none;
+        border-top: 1px solid #bbb;
+    }
+
+    .text-input textarea {
+        height: 200px;
+    }
+
+    .controls .row.from .icons {
+        border: none;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #bbb;
+        margin-bottom: 7px;
+    }
+
+    .controls .row.to .icons {
+        border: none;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #bbb;
+        margin-bottom: 7px;
+    }
+
+    .container .row.from {
+        flex-direction: column;
+    }
+
+    .container .row.to {
+        flex-direction: column-reverse;
+    }
+
+    .container .row .icons {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .controls .row select {
+        font-size: 16px;
+    }
+
+    .controls .exchange {
+        font-size: 14px;
+    }
+
+    .container button {
+        padding: 13px;
+        font-size: 16px;
+    }
+
+}
